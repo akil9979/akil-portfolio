@@ -1,50 +1,56 @@
 # Akil Rizwani — Developer Portfolio
 
-A responsive, dark-themed developer portfolio built with React, TypeScript, Vite, Lucide icons and plain CSS. The design uses CSS/native browser animations (no animation framework), an optimized WebP portrait, lazy-on-scroll reveal effects, and reduced-motion support.
+A modern, highly polished dark-themed developer portfolio engineered with React 19, TypeScript, Vite, Lucide icons, and performant CSS. The design adheres to a Linear/Vercel-inspired dark aesthetic featuring subtle gradients, glassmorphism, GPU-accelerated motion, real project screenshots, and full accessibility.
 
-## Included
+## Navigation & Sections
 
-- Resume-backed profile, education (CGPA 8.4/10), internship and open-source contributions.
-- Optimized portrait at `public/akil-portrait.webp`.
-- Downloadable resume at `public/resume.pdf`.
-- Project links for PlayHub, ConnectHub, Multiplayer Tic-Tac-Toe and Movie Explorer.
-- Responsive navigation, project filters, contact links and copy-email interaction.
-- Lightweight scroll reveal and CSS motion, disabled for users who request reduced motion.
-- No server/backend is required.
+1. **Home (`#home`):** Availability status, developer intro, portrait composition, and interactive floating code editor.
+2. **About (`#about`):** Engineering philosophy, Computer Engineering background (8.4/10 CGPA at GTU), and academic highlights.
+3. **Projects (`#projects`):** Four featured production projects (PlayHub, ConnectHub, AI Recipe Generator, Movie Explorer).
+4. **Skills (`#skills`):** Technical toolkit organized into Frontend, Backend, Database, and Tools.
+5. **Experience (`#experience`):** UpSkill Campus full-stack internship, GSSoC '26 open source contributions, and Odoo × LDCE Hackathon leadership.
+6. **Contact (`#contact`):** Direct contact channels, one-click email copy, social links, and ATS resume download.
 
-## Run locally
+## Featured Projects (Strict Order)
 
-Requirements: Node.js 20+ and npm.
+1. **PlayHub: Multiplayer Arena** (Flagship Project)
+   - Real-time multiplayer platform with authenticated matchmaking, private rooms, player challenges, synchronized gameplay, server-side validation, PostgreSQL persistence, and global leaderboard.
+   - Stack: React, TypeScript, Tailwind CSS, Node.js, Express.js, Socket.IO, PostgreSQL, Redux Toolkit, JWT, HttpOnly Cookies.
+   - Live Demo: `https://playhub-multiplayer-arena-1.onrender.com/`
+   - GitHub: `https://github.com/akil9979/PlayHub-Multiplayer-Arena`
+
+2. **ConnectHub: Professional Social Networking Platform**
+   - Full-stack social networking application with posts, comments, likes, real-time notifications, connection management, and media uploads.
+   - Stack: React, Node.js, Express.js, MongoDB, Socket.IO, JWT, Cloudinary, Multer.
+   - Live Demo: `https://connecthub-frontend-00l6.onrender.com/`
+   - GitHub: `https://github.com/akil9979/ConnectHub`
+
+3. **AI Recipe Generator**
+   - AI-powered kitchen management platform leveraging Google Gemini for custom recipe creation based on pantry ingredients, dietary restrictions, and meal planning.
+   - Stack: PostgreSQL, Express.js, React, Node.js, Gemini AI, Tailwind CSS, JWT, bcryptjs.
+   - GitHub: `https://github.com/akil9979/AI-Recipe-Generator`
+
+4. **Movie Explorer**
+   - Movie discovery and browsing application with asynchronous API integration and global state management.
+   - Stack: React, JavaScript, Redux Toolkit, Vite, Tailwind CSS, React Router.
+   - GitHub: `https://github.com/akil9979/Movie_explorer`
+
+## Tech Stack & Architecture
+
+- **Client:** React 19, TypeScript, Lucide React, pure modern CSS design system.
+- **Motion:** Native CSS animations (`transform` and `opacity` only) and `IntersectionObserver` with `prefers-reduced-motion` compliance.
+- **Assets:** High-resolution optimized project screenshots and portrait served locally from `public/`.
+- **Resume:** PDF linked directly at `public/resume.pdf`.
+
+## Development & Build
 
 ```bash
-npm install
+# Run local dev server
 npm run dev
-```
 
-Open the local URL printed by Vite, usually `http://localhost:5173`.
-
-## Production build
-
-```bash
+# Run type check and production build
 npm run build
+
+# Preview production build locally
 npm run preview
 ```
-
-The production output is generated in `dist/`.
-
-## Deploy on Vercel
-
-1. Push this project folder to a GitHub repository.
-2. Import that repository in Vercel.
-3. Framework preset: Vite.
-4. Build command: `npm run build`.
-5. Output directory: `dist`.
-
-Netlify also works with build command `npm run build` and publish directory `dist`.
-
-## Before publishing
-
-- Check that the phone number and email are the exact contact details you want displayed publicly.
-- Test each project source/demo link, particularly the PlayHub and Tic-Tac-Toe repositories.
-- The portfolio does not track analytics or load an external web font. The hero portrait is served locally as WebP to avoid a third-party image request.
-- This source was updated in an environment where npm package installation timed out. Run `npm install` and `npm run build` locally before deploying; a production build could not be verified here.
